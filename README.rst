@@ -1,4 +1,4 @@
-Template for the Read the Docs tutorial
+DermVision: Official project documentation repo
 =======================================
 
 This GitHub template includes fictional Python library
