@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'dermvision'
+copyright = '2024, Mo Oyedeji'
+author = 'Mo Oyedeji'
 
 release = '0.1'
 version = '0.1.0'
