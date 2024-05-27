@@ -1,9 +1,8 @@
 DermVision: Official project documentation repo
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+DermVision is a web and mobile application for assistive diagnosis of skin lesions with advanced features for patients' and dermatologists
 
-Read the tutorial here:
+Read the documentation here:
 
-https://docs.readthedocs.io/en/stable/tutorial/
+https://dermvisiondocs.readthedocs.io/en/latest/
