@@ -5,7 +5,7 @@ Welcome to DermVision's documentation!
 
 
 
-Check out the :doc:`usage` section for further information, including
+Check out the :doc:`usage` section for further information, including syzsujdbjsj
 how to :ref:`installation` the project.
 
 .. note::
