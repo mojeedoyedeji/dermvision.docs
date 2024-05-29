@@ -8,9 +8,13 @@ Introduction
 
 
 
+.. |spacer| raw:: html
 
+   <div style="margin-bottom: 20px;"></div>
 
-**DermVision** (/ˈdɜrmˌvɪʒən/) is a SaaS computer-aided assistive diagnostic tool for patients and dermatologists
+|spacer|
+
+**DermVision** (/ˈdɜrmˌvɪʒən/) is a SaaS computer-aided assistive diagnostic tool for patients and dermatologists.
 
 
 
@@ -22,7 +26,7 @@ how to :ref:`installation` the project.
    This project is under active development.
 
 
-Key Features
+Core Features
 ^^^^^^^^^^^^
 
 - **AI-Powered Diagnostics**: Uses machine learning to analyze skin conditions.
