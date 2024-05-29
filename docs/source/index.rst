@@ -17,10 +17,19 @@ how to :ref:`installation` the project.
 
    This project is under active development.
 
+
+Key Features
+^^^^^^^^^^^^
+
+- **AI-Powered Diagnostics**: Uses machine learning to analyze skin conditions.
+- **User-Friendly Interface**: Intuitive design for ease of use.
+
+
 Contents
 --------
 
 .. toctree::
+   intro <self>
    introduction
    getting-started
    system-design
