@@ -1,7 +1,7 @@
 Welcome to DermVision's documentation!
 ===================================
 
-.. image:: images/dermvision_main.png
+.. image:: ../images/dermvision_main.png
    :alt: Project Logo
    :width: 200px
    :align: center
