@@ -1,10 +1,11 @@
-Welcome to DermVision's documentation!
-===================================
+Introduction
+============
 
 .. image:: ../images/dermvision_main.png
    :alt: Project Logo
    :width: 200px
    :align: center
+   :margin
 
 **DermVision** (/ˈdɜrmˌvɪʒən/) is a SaaS computer-aided assistive diagnostic tool for patients and dermatologists
 
