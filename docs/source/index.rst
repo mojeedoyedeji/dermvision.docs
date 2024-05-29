@@ -8,7 +8,7 @@ Introduction
 
 
 
-   
+
 
 **DermVision** (/ˈdɜrmˌvɪʒən/) is a SaaS computer-aided assistive diagnostic tool for patients and dermatologists
 
@@ -26,7 +26,10 @@ Key Features
 ^^^^^^^^^^^^
 
 - **AI-Powered Diagnostics**: Uses machine learning to analyze skin conditions.
-- **User-Friendly Interface**: Intuitive design for ease of use.
+- **Diagnostics Records Management**: Intuitive design for ease of use.
+- **Patients Records Management**: Intuitive design for ease of use.
+- **Clinical Notes Management**: Intuitive design for ease of use.
+- **Prescription Records Management**: Intuitive design for ease of use.
 
 
 Contents
