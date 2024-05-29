@@ -5,7 +5,6 @@ Introduction
    :alt: Project Logo
    :width: 200px
    :align: center
-   :margin-bottom: 20px 
 
 **DermVision** (/ˈdɜrmˌvɪʒən/) is a SaaS computer-aided assistive diagnostic tool for patients and dermatologists
 
