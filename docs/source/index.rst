@@ -30,8 +30,7 @@ Contents
 --------
 
 .. toctree::
-   intro <self>
-   introduction
+   Introduction <self>
    getting-started
    system-design
    web-applications
