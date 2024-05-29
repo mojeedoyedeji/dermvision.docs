@@ -16,6 +16,10 @@ Contents
 --------
 
 .. toctree::
-   usage
    introduction
+   getting-started
+   system-design
+   web-applications
+   mobile-applications
+   usage
    api
