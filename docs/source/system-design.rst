@@ -41,6 +41,11 @@ The **Patient** entity stores essential information about patients. This table i
    "ClinicalNotes", "One-to-Many", "A patient can have multiple clinical notes.", "ClinicalNote", "PatientID in the ClinicalNote table references PatientID in the Patient table."
    "Prescriptions", "One-to-Many", "A patient can have multiple prescriptions.", "Prescription", "PatientID in the Prescription table references PatientID in the Patient table."
 
+
+API
+^^^
+
+
 **URL:** `/api/user/{id}`
 
 **Method:** `GET`
