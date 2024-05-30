@@ -10,6 +10,7 @@ This documentation outlines the entity relationship (ER) model for the Patient R
 
 Patient Entity
 ^^^^^^^^^^^^^^
+The **Patient** entity stores essential information about patients. This table is central to the Patient Record Management System, as it contains the primary data necessary for identifying and managing patient records.
 
 .. csv-table:: 
    :header: "Attribute", "Description", "Data Type", "Constraints"
