@@ -49,6 +49,23 @@ This endpoint retrieves user data from the server.
         "created_at": "2023-05-28T12:34:56Z"
     }
 
+
+.. csv-table:: Patient Entity
+   :header: "Attribute", "Description", "Data Type", "Constraints"
+   :widths: 20, 40, 20, 20
+
+   "PatientID", "A unique identifier for each patient.", "Integer", "Primary Key, Auto-increment, Not Null"
+   "FirstName", "The first name of the patient.", "Varchar(50)", "Not Null"
+   "LastName", "The last name of the patient.", "Varchar(50)", "Not Null"
+   "DateOfBirth", "The date of birth of the patient.", "Date", "Not Null"
+   "Gender", "The gender of the patient.", "Varchar(10)", "Not Null"
+   "ContactNumber", "The contact number of the patient.", "Varchar(15)", "Not Null"
+   "EmailAddress", "The email address of the patient.", "Varchar(100)", "Unique, Not Null"
+   "Address", "The residential address of the patient.", "Varchar(255)", "Not Null"
+   "EmergencyContact", "The emergency contact details for the patient.", "Varchar(255)", "Not Null"
+   "MedicalHistory", "A summary of the patient's medical history.", "Text", "Nullable"
+
+   
 Error Responses
 ---------------
 
