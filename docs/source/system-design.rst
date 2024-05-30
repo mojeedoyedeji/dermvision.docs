@@ -12,6 +12,8 @@ Patient Entity
 ^^^^^^^^^^^^^^
 The **Patient** entity stores essential information about patients. This table is central to the Patient Record Management System, as it contains the primary data necessary for identifying and managing patient records.
 
+**Attributes**
+
 .. csv-table:: 
    :header: "Attribute", "Description", "Data Type", "Constraints"
    :widths: 20, 40, 20, 20
