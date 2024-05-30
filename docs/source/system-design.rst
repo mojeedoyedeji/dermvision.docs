@@ -11,7 +11,7 @@ This documentation outlines the entity relationship (ER) model for the Patient R
 Patient Entity
 ^^^^^^^^^^^^^^
 
-.. csv-table:: Patient Entity
+.. csv-table:: 
    :header: "Attribute", "Description", "Data Type", "Constraints"
    :widths: 20, 40, 20, 20
 
