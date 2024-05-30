@@ -30,6 +30,16 @@ The **Patient** entity stores essential information about patients. This table i
    "MedicalHistory", "A summary of the patient's medical history.", "Text", "Nullable"
 
 
+**Relationships**
+
+.. csv-table:: 
+   :header: "Relationship", "Type", "Description", "Related Entity", "Foreign Key"
+   :widths: 20, 20, 40, 20, 20
+
+   "Appointments", "One-to-Many", "A patient can have multiple appointments.", "Appointment", "PatientID in the Appointment table references PatientID in the Patient table."
+   "Diagnostics", "One-to-Many", "A patient can have multiple diagnostic records.", "Diagnostic", "PatientID in the Diagnostic table references PatientID in the Patient table."
+   "ClinicalNotes", "One-to-Many", "A patient can have multiple clinical notes.", "ClinicalNote", "PatientID in the ClinicalNote table references PatientID in the Patient table."
+   "Prescriptions", "One-to-Many", "A patient can have multiple prescriptions.", "Prescription", "PatientID in the Prescription table references PatientID in the Patient table."
 
 **URL:** `/api/user/{id}`
 
