@@ -1,10 +1,10 @@
 System Design
 =============
 
-Fetch User Data
+ERM - Patient Record Management System
 ---------------
 
-This endpoint retrieves user data from the server.
+This documentation outlines the entity relationship (ER) model for the Patient Record Management System within DermVision. The ER model defines the structure of the data and the relationships between various entities involved in managing patient records. Below is a detailed description of one of the key tables in the system: the **Patient** table.
 
 **URL:** `/api/user/{id}`
 
@@ -65,7 +65,7 @@ This endpoint retrieves user data from the server.
    "EmergencyContact", "The emergency contact details for the patient.", "Varchar(255)", "Not Null"
    "MedicalHistory", "A summary of the patient's medical history.", "Text", "Nullable"
 
-   
+
 Error Responses
 ---------------
 
