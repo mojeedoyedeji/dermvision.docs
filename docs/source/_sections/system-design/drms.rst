@@ -47,10 +47,10 @@ for identifying and managing patient records.
    :header: "Relationship", "Type", "Description", "Related Entity", "Foreign Key"
    :widths: 20, 20, 40, 20, 20
 
-   "Patients", "One-to-Many", "A patient can have multiple diagnostic records", "Appointment", "PatientID in the Appointment table references PatientID in the Patient table."
-   "Derma", "One-to-Many", "A dermatologists can create multiple diagnostic records.", "Diagnostic", "PatientID in the Diagnostic table references PatientID in the Patient table."
+   "Patients", "One-to-Many", "A patient can have multiple diagnostic records", "Patients", "PatientID in the Appointment table references _id in the Patient table."
+   "Derma", "One-to-Many", "A dermatologists can create multiple diagnostic records.", "Dermatologist", "DermatologistID in the Diagnostic table references _id in the Dermatologist table."
    
-   
+
    API
 ^^^
 .. uml::
