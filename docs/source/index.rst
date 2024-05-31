@@ -40,7 +40,6 @@ Contents
    Introduction <self>
    getting-started
    system-design
-   web-applications
-   mobile-applications
-   usage
+   how-to-guides
+   developer-api
    api
