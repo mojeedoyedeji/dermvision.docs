@@ -2,7 +2,7 @@ System Design
 =============
 
 .. include:: ./_sections/system-design/prms.rst
-
+.. include:: ./_sections/system-design/drms.rst
 
 
 Error Responses
