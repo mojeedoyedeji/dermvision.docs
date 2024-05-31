@@ -42,4 +42,3 @@ Contents
    system-design
    how-to-guides
    developer-api
-   api
