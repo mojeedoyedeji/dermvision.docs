@@ -19,15 +19,15 @@ as it contains the primary data necessary for identifying and managing patient r
    :widths: 20, 40, 20, 20
 
    "_id", "A unique identifier for each patient.", "Integer", "Primary Key, Auto-increment, Not Null"
-   "name", "The first name of the patient.", "Varchar(50)", "Not Null"
-   "email", "The last name of the patient.", "Varchar(50)", "Not Null"
-   "phone", "The date of birth of the patient.", "Date", "Not Null"
-   "nationality", "The gender of the patient.", "Varchar(10)", "Not Null"
-   "gender", "The contact number of the patient.", "Varchar(15)", "Not Null"
-   "dob", "The email address of the patient.", "Varchar(100)", "Unique, Not Null"
-   "derma", "The residential address of the patient.", "Varchar(255)", "Not Null"
-   "created", "The emergency contact details for the patient.", "Varchar(255)", "Not Null"
-   "updated", "A summary of the patient's medical history.", "Text", "Nullable"
+   "name", "The full name of the patient.", "Varchar(50)", "Not Null"
+   "email", "The email address of the patient", "Varchar(50)", "Not Null"
+   "phone", "The phone number of the patient", "Date", "Not Null"
+   "nationality", "The nationality of the patient", "Varchar(10)", "Not Null"
+   "gender", "The gender of the patient", "Varchar(15)", "Not Null"
+   "dob", "The date of birth of the patient", "Varchar(100)", "Unique, Not Null"
+   "derma", "The id of the dermatologist that created the patient record", "Varchar(255)", "Not Null"
+   "created", "The date the record was created", "Varchar(255)", "Not Null"
+   "updated", "The date the record was updated", "Text", "Nullable"
 
 
 **Relationships**
@@ -40,7 +40,7 @@ as it contains the primary data necessary for identifying and managing patient r
    "Diagnostics", "One-to-Many", "A patient can have multiple diagnostic records.", "Diagnostic", "PatientID in the Diagnostic table references PatientID in the Patient table."
    "ClinicalNotes", "One-to-Many", "A patient can have multiple clinical notes.", "ClinicalNote", "PatientID in the ClinicalNote table references PatientID in the Patient table."
    "Prescriptions", "One-to-Many", "A patient can have multiple prescriptions.", "Prescription", "PatientID in the Prescription table references PatientID in the Patient table."
-   "Derma", "One-to-Many", "A patient can have multiple prescriptions.", "Prescription", "PatientID in the Prescription table references PatientID in the Patient table."
+   "Derma", "Many-to-One", "A dermatolgist can have multiple patients", "Prescription", "PatientID in the Prescription table references PatientID in the Patient table."
 
 API
 ^^^
@@ -106,3 +106,21 @@ API
         "created_at": "2023-05-28T12:34:56Z"
     }
 
+Error Responses
+^^^^^^^^^^^^^^^
+
+**404 Not Found:**
+
+.. code-block:: json
+
+    {
+        "error": "User not found"
+    }
+
+**401 Unauthorized:**
+
+.. code-block:: json
+
+    {
+        "error": "Invalid or missing token"
+    }
