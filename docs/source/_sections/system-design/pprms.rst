@@ -1,13 +1,16 @@
-Patient Record Management System
+Prescription Record Management System
 ---------------
 
 
-This documentation outlines the entity relationship (ER) model for the Patient Record Management System within DermVision. The ER model defines the structure of the data and the relationships between various entities involved in managing patient records. Below is a detailed description of one of the key tables in the system: the **Patient** table.
+This documentation outlines the entity relationship (ER) model for the Prescription Record Management System within DermVision. 
+The ER model defines the structure of the data and the relationships between various entities involved in managing prescription records. 
+Below is a detailed description of one of the key tables in the system: the **Treatment** table.
 
 
-Patient Entity
-^^^^^^^^^^^^^^
-The **Patient** entity stores essential information about patients. This table is central to the Patient Record Management System, as it contains the primary data necessary for identifying and managing patient records.
+Treatment Entity
+^^^^^^^^^^^^^^^^
+The **Treatment** entity stores essential information about patients. This table is central to the Prescription Record Management System, 
+as it contains the primary data necessary for identifying and managing prescription records.
 
 **Attributes**
 

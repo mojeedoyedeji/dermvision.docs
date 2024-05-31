@@ -1,13 +1,15 @@
-Patient Record Management System
+Appointment Record Management System
 ---------------
 
+This section outlines the entity relationship (ER) model for the Appointment Record Management System within DermVision. 
+The ER model defines the structure of the data and the relationships between various entities involved in managing appointment records. 
+Below is a detailed description of one of the key tables in the system: the **Appointment** table.
 
-This documentation outlines the entity relationship (ER) model for the Patient Record Management System within DermVision. The ER model defines the structure of the data and the relationships between various entities involved in managing patient records. Below is a detailed description of one of the key tables in the system: the **Patient** table.
 
-
-Patient Entity
+Appointment Entity
 ^^^^^^^^^^^^^^
-The **Patient** entity stores essential information about patients. This table is central to the Patient Record Management System, as it contains the primary data necessary for identifying and managing patient records.
+The **Appointment** entity stores essential information about patients. 
+This table is central to the Appointment Record Management System, as it contains the primary data necessary for identifying and managing appointment records.
 
 **Attributes**
 
