@@ -1,15 +1,16 @@
-Appointment Record Management System
+Diagnostic Model Management System
 ---------------
 
-This section outlines the entity relationship (ER) model for the Appointment Record Management System within DermVision. 
-The ER model defines the structure of the data and the relationships between various entities involved in managing appointment records. 
-Below is a detailed description of one of the key tables in the system: the **Appointment** table.
+
+This documentation outlines the entity relationship (ER) model for the Patient Record Management System within DermVision. 
+The ER model defines the structure of the data and the relationships between various entities involved in managing patient records. 
+Below is a detailed description of one of the key tables in the system: the **Patient** table.
 
 
-Appointment Entity
+Patient Entity
 ^^^^^^^^^^^^^^
-The **Appointment** entity stores essential information about patients. 
-This table is central to the Appointment Record Management System, as it contains the primary data necessary for identifying and managing appointment records.
+The **Patient** entity stores essential information about patients. This table is central to the Patient Record Management System, 
+as it contains the primary data necessary for identifying and managing patient records.
 
 **Attributes**
 
@@ -18,15 +19,15 @@ This table is central to the Appointment Record Management System, as it contain
    :widths: 20, 40, 20, 20
 
    "_id", "A unique identifier for each patient.", "Integer", "Primary Key, Auto-increment, Not Null"
-   "patient", "The first name of the patient.", "Varchar(50)", "Not Null"
-   "derma", "The last name of the patient.", "Varchar(50)", "Not Null"
-   "title", "The date of birth of the patient.", "Date", "Not Null"
-   "notes", "The gender of the patient.", "Varchar(10)", "Not Null"
-   "from", "The contact number of the patient.", "Varchar(15)", "Not Null"
-   "to", "The email address of the patient.", "Varchar(100)", "Unique, Not Null"
-   "created", "The residential address of the patient.", "Varchar(255)", "Not Null"
-   "modified", "The emergency contact details for the patient.", "Varchar(255)", "Not Null"
-   "status", "A summary of the patient's medical history.", "Text", "Nullable"
+   "name", "The full name of the patient.", "Varchar(50)", "Not Null"
+   "email", "The email address of the patient", "Varchar(50)", "Not Null"
+   "phone", "The phone number of the patient", "Date", "Not Null"
+   "nationality", "The nationality of the patient", "Varchar(10)", "Not Null"
+   "gender", "The gender of the patient", "Varchar(15)", "Not Null"
+   "dob", "The date of birth of the patient", "Varchar(100)", "Unique, Not Null"
+   "derma", "The id of the dermatologist that created the patient record", "Varchar(255)", "Not Null"
+   "created", "The date the record was created", "Varchar(255)", "Not Null"
+   "updated", "The date the record was updated", "Text", "Nullable"
 
 
 **Relationships**
@@ -35,10 +36,11 @@ This table is central to the Appointment Record Management System, as it contain
    :header: "Relationship", "Type", "Description", "Related Entity", "Foreign Key"
    :widths: 20, 20, 40, 20, 20
 
-   "Patients", "One-to-Many", "A patient can have multiple appointment records", "Patients", "PatientID in the Appointment table references _id in the Patient table."
-   "Derma", "One-to-Many", "A dermatologists can create multiple appointment records.", "Dermatologist", "DermatologistID in the Diagnostic table references _id in the Dermatologist table."
-   
-
+   "Appointments", "One-to-Many", "A patient can have multiple appointments.", "Appointment", "PatientID in the Appointment table references PatientID in the Patient table."
+   "Diagnostics", "One-to-Many", "A patient can have multiple diagnostic records.", "Diagnostic", "PatientID in the Diagnostic table references PatientID in the Patient table."
+   "ClinicalNotes", "One-to-Many", "A patient can have multiple clinical notes.", "ClinicalNote", "PatientID in the ClinicalNote table references PatientID in the Patient table."
+   "Prescriptions", "One-to-Many", "A patient can have multiple prescriptions.", "Prescription", "PatientID in the Prescription table references PatientID in the Patient table."
+   "Derma", "Many-to-One", "A dermatolgist can have multiple patients", "Prescription", "PatientID in the Prescription table references PatientID in the Patient table."
 
 API
 ^^^
@@ -104,3 +106,21 @@ API
         "created_at": "2023-05-28T12:34:56Z"
     }
 
+Error Responses
+^^^^^^^^^^^^^^^
+
+**404 Not Found:**
+
+.. code-block:: json
+
+    {
+        "error": "User not found"
+    }
+
+**401 Unauthorized:**
+
+.. code-block:: json
+
+    {
+        "error": "Invalid or missing token"
+    }
