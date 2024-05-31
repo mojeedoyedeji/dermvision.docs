@@ -18,17 +18,21 @@ as it contains the primary data necessary for identifying and managing prescript
    :header: "Attribute", "Description", "Data Type", "Constraints"
    :widths: 20, 40, 20, 20
 
-   "PatientID", "A unique identifier for each patient.", "Integer", "Primary Key, Auto-increment, Not Null"
-   "FirstName", "The first name of the patient.", "Varchar(50)", "Not Null"
-   "LastName", "The last name of the patient.", "Varchar(50)", "Not Null"
-   "DateOfBirth", "The date of birth of the patient.", "Date", "Not Null"
-   "Gender", "The gender of the patient.", "Varchar(10)", "Not Null"
-   "ContactNumber", "The contact number of the patient.", "Varchar(15)", "Not Null"
-   "EmailAddress", "The email address of the patient.", "Varchar(100)", "Unique, Not Null"
-   "Address", "The residential address of the patient.", "Varchar(255)", "Not Null"
-   "EmergencyContact", "The emergency contact details for the patient.", "Varchar(255)", "Not Null"
-   "MedicalHistory", "A summary of the patient's medical history.", "Text", "Nullable"
-
+   "_id", "A unique identifier for each patient.", "Integer", "Primary Key, Auto-increment, Not Null"
+   "derma", "The first name of the patient.", "Varchar(50)", "Not Null"
+   "patient", "The last name of the patient.", "Varchar(50)", "Not Null"
+   "type", "The date of birth of the patient.", "Date", "Not Null"
+   "mode", "The gender of the patient.", "Varchar(10)", "Not Null"
+   "title", "The contact number of the patient.", "Varchar(15)", "Not Null"
+   "description", "The email address of the patient.", "Varchar(100)", "Unique, Not Null"
+   "dosage_quantity", "The residential address of the patient.", "Varchar(255)", "Not Null"
+   "dosage_unit", "The emergency contact details for the patient.", "Varchar(255)", "Not Null"
+   "duration_number", "A summary of the patient's medical history.", "Text", "Nullable"
+   "duration_period", "A summary of the patient's medical history.", "Text", "Nullable"
+   "frequency_value", "A summary of the patient's medical history.", "Text", "Nullable"
+   "frequency_period", "A summary of the patient's medical history.", "Text", "Nullable"
+   "created", "A summary of the patient's medical history.", "Text", "Nullable"
+   "modified", "A summary of the patient's medical history.", "Text", "Nullable" 
 
 **Relationships**
 
