@@ -40,10 +40,10 @@ as it contains the primary data necessary for identifying and managing prescript
    :header: "Relationship", "Type", "Description", "Related Entity", "Foreign Key"
    :widths: 20, 20, 40, 20, 20
 
-   "Appointments", "One-to-Many", "A patient can have multiple appointments.", "Appointment", "PatientID in the Appointment table references PatientID in the Patient table."
-   "Diagnostics", "One-to-Many", "A patient can have multiple diagnostic records.", "Diagnostic", "PatientID in the Diagnostic table references PatientID in the Patient table."
-   "ClinicalNotes", "One-to-Many", "A patient can have multiple clinical notes.", "ClinicalNote", "PatientID in the ClinicalNote table references PatientID in the Patient table."
-   "Prescriptions", "One-to-Many", "A patient can have multiple prescriptions.", "Prescription", "PatientID in the Prescription table references PatientID in the Patient table."
+   "Patients", "One-to-Many", "A patient can have multiple prescription records", "Patients", "PatientID in the Appointment table references _id in the Patient table."
+   "Derma", "One-to-Many", "A dermatologists can create multiple prescription records.", "Dermatologist", "DermatologistID in the Diagnostic table references _id in the Dermatologist table."
+   
+
 
 
 API
