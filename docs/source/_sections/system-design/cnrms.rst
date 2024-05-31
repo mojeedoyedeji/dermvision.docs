@@ -17,11 +17,14 @@ This table is essential for managing and tracking clinical notes related to pati
    :header: "Attribute", "Description", "Data Type", "Constraints"
    :widths: 20, 40, 20, 20
 
-   "NoteID", "A unique identifier for each clinical note.", "Integer", "Primary Key, Auto-increment, Not Null"
-   "PatientID", "The ID of the patient associated with the note.", "Integer", "Foreign Key, Not Null"
-   "Date", "The date of the clinical note.", "Date", "Not Null"
-   "Notes", "The content of the clinical note.", "Text", "Not Null"
-   "ProviderID", "The ID of the healthcare provider.", "Integer", "Not Null"
+   "_id", "A unique identifier for each clinical note.", "Integer", "Primary Key, Auto-increment, Not Null"
+   "title", "The ID of the patient associated with the note.", "Integer", "Foreign Key, Not Null"
+   "note", "The date of the clinical note.", "Date", "Not Null"
+   "derma", "The content of the clinical note.", "Text", "Not Null"
+   "patient", "The ID of the healthcare provider.", "Integer", "Not Null"
+   "created", "The ID of the healthcare provider.", "Integer", "Not Null"
+   "modified", "The ID of the healthcare provider.", "Integer", "Not Null"
+   "deleted", "The ID of the healthcare provider.", "Integer", "Not Null"
 
 
 **Relationships**
