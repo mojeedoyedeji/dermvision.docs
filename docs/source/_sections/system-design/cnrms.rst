@@ -1,13 +1,15 @@
-Patient Record Management System
+Clinical Notes Record Management System
 ---------------
 
+This documentation outlines the entity relationship (ER) model for the Clinical Notes Record Management System within DermVision. 
+The ER model defines the structure of the data and the relationships between various entities involved in managing clinical notes records. 
+Below is a detailed description of one of the key tables in the system: the **Clinical Notes** table.
 
-This documentation outlines the entity relationship (ER) model for the Patient Record Management System within DermVision. The ER model defines the structure of the data and the relationships between various entities involved in managing patient records. Below is a detailed description of one of the key tables in the system: the **Patient** table.
 
-
-Patient Entity
-^^^^^^^^^^^^^^
-The **Patient** entity stores essential information about patients. This table is central to the Patient Record Management System, as it contains the primary data necessary for identifying and managing patient records.
+Clinical Note Entity
+^^^^^^^^^^^^^^^^^^^^
+The **ClinicalNote** entity stores information about clinical notes recorded by healthcare providers. 
+This table is essential for managing and tracking clinical notes related to patients.
 
 **Attributes**
 
@@ -15,16 +17,11 @@ The **Patient** entity stores essential information about patients. This table i
    :header: "Attribute", "Description", "Data Type", "Constraints"
    :widths: 20, 40, 20, 20
 
-   "PatientID", "A unique identifier for each patient.", "Integer", "Primary Key, Auto-increment, Not Null"
-   "FirstName", "The first name of the patient.", "Varchar(50)", "Not Null"
-   "LastName", "The last name of the patient.", "Varchar(50)", "Not Null"
-   "DateOfBirth", "The date of birth of the patient.", "Date", "Not Null"
-   "Gender", "The gender of the patient.", "Varchar(10)", "Not Null"
-   "ContactNumber", "The contact number of the patient.", "Varchar(15)", "Not Null"
-   "EmailAddress", "The email address of the patient.", "Varchar(100)", "Unique, Not Null"
-   "Address", "The residential address of the patient.", "Varchar(255)", "Not Null"
-   "EmergencyContact", "The emergency contact details for the patient.", "Varchar(255)", "Not Null"
-   "MedicalHistory", "A summary of the patient's medical history.", "Text", "Nullable"
+   "NoteID", "A unique identifier for each clinical note.", "Integer", "Primary Key, Auto-increment, Not Null"
+   "PatientID", "The ID of the patient associated with the note.", "Integer", "Foreign Key, Not Null"
+   "Date", "The date of the clinical note.", "Date", "Not Null"
+   "Notes", "The content of the clinical note.", "Text", "Not Null"
+   "ProviderID", "The ID of the healthcare provider.", "Integer", "Not Null"
 
 
 **Relationships**
@@ -33,10 +30,7 @@ The **Patient** entity stores essential information about patients. This table i
    :header: "Relationship", "Type", "Description", "Related Entity", "Foreign Key"
    :widths: 20, 20, 40, 20, 20
 
-   "Appointments", "One-to-Many", "A patient can have multiple appointments.", "Appointment", "PatientID in the Appointment table references PatientID in the Patient table."
-   "Diagnostics", "One-to-Many", "A patient can have multiple diagnostic records.", "Diagnostic", "PatientID in the Diagnostic table references PatientID in the Patient table."
-   "ClinicalNotes", "One-to-Many", "A patient can have multiple clinical notes.", "ClinicalNote", "PatientID in the ClinicalNote table references PatientID in the Patient table."
-   "Prescriptions", "One-to-Many", "A patient can have multiple prescriptions.", "Prescription", "PatientID in the Prescription table references PatientID in the Patient table."
+   "Patients", "Many-to-One", "Multiple clinical notes can belong to one patient.", "Patient", "PatientID in the ClinicalNote table references PatientID in the Patient table."
 
 
 API
