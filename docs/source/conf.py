@@ -21,6 +21,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'sphinxcontrib.plantuml'
+    'sphinx_tabs.tabs'
 ]
 
 intersphinx_mapping = {
@@ -39,3 +40,6 @@ html_static_path = ['_static']
 epub_show_urls = 'footnote'
 
 plantuml = 'java -jar /path/to/plantuml.jar'
+
+sphinx_tabs_valid_builders = ['linkcheck']
+sphinx_tabs_disable_tab_closing = True
