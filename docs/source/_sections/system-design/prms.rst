@@ -1,5 +1,5 @@
 Patient Record Management System
----------------
+--------------------------------
 
 
 This documentation outlines the entity relationship (ER) model for the Patient Record Management System within DermVision. 
@@ -62,6 +62,7 @@ Get all patient record
 **Headers:**
 
 .. code-block:: http
+
     Authorization: Bearer {token}
     Content-Type: application/json
 
@@ -105,25 +106,6 @@ Get all patient record
         "created_at": "2023-05-28T12:34:56Z"
     }
 
-Error Responses
-^^^^^^^^^^^^^^^
-
-**404 Not Found:**
-
-.. code-block:: json
-
-    {
-        "error": "User not found"
-    }
-
-**401 Unauthorized:**
-
-.. code-block:: json
-
-    {
-        "error": "Invalid or missing token"
-    }
-
 Add new patient record
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -131,11 +113,12 @@ Add new patient record
 
 **Method:** `POST`
 
-**Description:**  Get all patient records
+**Description:**  Add new patient record
 
 **Headers:**
 
 .. code-block:: http
+    
     Authorization: Bearer {token}
     Content-Type: application/json
 
@@ -184,7 +167,7 @@ Add new patient record
     }
 
 Error Responses
-^^^^^^^^^^^^^^^
+---------------
 
 **404 Not Found:**
 
