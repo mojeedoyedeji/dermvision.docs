@@ -51,7 +51,7 @@ API
     @enduml  
      
 Get all patient record
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 **Endpoint URL** `/patient/`
 
@@ -81,7 +81,7 @@ Get all patient record
 
 .. code-block:: javascript
 
-    fetch('https://api.example.com/api/user/123', {
+    fetch('https://api.dermvision.com/patient/', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
