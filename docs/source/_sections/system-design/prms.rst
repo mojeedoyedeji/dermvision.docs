@@ -118,9 +118,11 @@ Add new patient record
 **Headers:**
 
 .. code-block:: http
-    
+
     Authorization: Bearer {token}
     Content-Type: application/json
+
+
 
 **Body:**
 
@@ -166,21 +168,55 @@ Add new patient record
         "created_at": "2023-05-28T12:34:56Z"
     }
 
-Error Responses
----------------
+Get all patients belonging to a dermatologist
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**404 Not Found:**
+**Endpoint URL:** `/patient/derma/:id`
+
+**Method:** `GET`
+
+**Description:**  Get all patients belonging to a dermatologist
+
+**Headers:**
+
+.. code-block:: http
+
+    Authorization: Bearer {token}
+    Content-Type: application/json
+
+
+**Parameters:**
+- ``id`` - dermatologist id
+
+
+
+**Response:**
+- `200 OK`: A JSON object containing user data.
+- `404 Not Found`: If the user does not exist.
+- `401 Unauthorized`: If the authentication token is invalid or missing.
+
+**Example Request:**
+
+.. code-block:: javascript
+
+    fetch('https://api.dermvision.com/patient/derma/123456', {
+        method: 'POST',
+        headers: {
+            'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+**Example Response:**
 
 .. code-block:: json
 
     {
-        "error": "User not found"
-    }
-
-**401 Unauthorized:**
-
-.. code-block:: json
-
-    {
-        "error": "Invalid or missing token"
+        "id": 123,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "created_at": "2023-05-28T12:34:56Z"
     }
