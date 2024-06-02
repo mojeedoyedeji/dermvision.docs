@@ -45,10 +45,10 @@ as it contains the primary data necessary for identifying and managing patient r
 API
 ^^^
 .. uml::
-
+    @startuml
     Alice -> Bob: Hi!
-    Alice <- Bob: How are you?
-      
+    Bob --> Bob: How are you?
+    @enduml  
      
 
 **URL:** `/api/user/{id}`
