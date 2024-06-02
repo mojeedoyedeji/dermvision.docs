@@ -53,15 +53,17 @@ API
 Get all patient record
 ~~~~~~~~~~~~~~~~~~~~~~
 
-**Endpoint URL** `/patient/`
+**Endpoint URL:** `/patient/`
 
 **Method:** `GET`
 
 **Description:**  Get all patient records
 
 **Headers:**
-- `Authorization`: `Bearer <token>`
-- `Content-Type`: `application/json`
+
+.. code-block:: http
+    Authorization: Bearer {token}
+    Content-Type: application/json
 
 **Parameters:**
 
@@ -83,6 +85,84 @@ Get all patient record
 
     fetch('https://api.dermvision.com/patient/', {
         method: 'GET',
+        headers: {
+            'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+**Example Response:**
+
+.. code-block:: json
+
+    {
+        "id": 123,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "created_at": "2023-05-28T12:34:56Z"
+    }
+
+Error Responses
+^^^^^^^^^^^^^^^
+
+**404 Not Found:**
+
+.. code-block:: json
+
+    {
+        "error": "User not found"
+    }
+
+**401 Unauthorized:**
+
+.. code-block:: json
+
+    {
+        "error": "Invalid or missing token"
+    }
+
+Add new patient record
+~~~~~~~~~~~~~~~~~~~~~~
+
+**Endpoint URL:** `/patient/add`
+
+**Method:** `POST`
+
+**Description:**  Get all patient records
+
+**Headers:**
+
+.. code-block:: http
+    Authorization: Bearer {token}
+    Content-Type: application/json
+
+**Body:**
+
+.. code-block:: json
+
+    {
+        "derma": 123,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "phone": "+966507133905"
+        "dob": "08-Nov-1980" 
+    }
+
+
+**Response:**
+- `200 OK`: A JSON object containing user data.
+- `404 Not Found`: If the user does not exist.
+- `401 Unauthorized`: If the authentication token is invalid or missing.
+
+**Example Request:**
+
+.. code-block:: javascript
+
+    fetch('https://api.dermvision.com/patient/add', {
+        method: 'POST',
         headers: {
             'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
             'Content-Type': 'application/json'
