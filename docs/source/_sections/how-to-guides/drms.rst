@@ -1,6 +1,6 @@
-
-      Diagnostic Records Management
-      =============================
+=====================================
+Diagnostic Records Management Feature
+=====================================
 
       The Diagnostic Records Management System allows healthcare professionals to manage and maintain diagnostic records efficiently in the web application.
 
