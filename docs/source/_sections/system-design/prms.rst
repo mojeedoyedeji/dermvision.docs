@@ -1,6 +1,7 @@
 Patient Record Management System
 --------------------------------
 
+.. _system-design-prms:
 
 This documentation outlines the entity relationship (ER) model for the Patient Record Management System within DermVision. 
 The ER model defines the structure of the data and the relationships between various entities involved in managing patient records. 
@@ -265,7 +266,6 @@ Update patient record
         "dob": "08-Nov-1980" 
     }
 
-
 **Response:**
 - `200 OK`: A JSON object containing user data.
 - `404 Not Found`: If the user does not exist.
@@ -285,3 +285,6 @@ Update patient record
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
+
+
+Next: :ref:`system-design-prms`

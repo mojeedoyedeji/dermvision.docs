@@ -1,6 +1,8 @@
 Diagnostics Record Management System
 ---------------
 
+.. _system-design-drms:
+
 This documentation outlines the entity relationship (ER) model for the Diagnostic Record Management System within DermVision. 
 The ER model defines the structure of the data and the relationships between various entities involved in managing diagnostic records. 
 Below is a detailed description of one of the key tables in the system: the **Diagnostic** table.
