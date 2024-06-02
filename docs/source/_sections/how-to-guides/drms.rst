@@ -1,105 +1,211 @@
-=====================================
-Diagnostic Records Management Feature
-=====================================
-
-      The Diagnostic Records Management System allows healthcare professionals to manage and maintain diagnostic records efficiently in the web application.
 
 
-      .. tabs::
+===========================
+Patient Records Management Feature
+===========================
 
-        .. tab:: Web Application
+This guide will walk you through the steps to access, add, update, and delete patient and diagnostic records in both web and mobile applications. Use the tabs below to switch between the web and mobile application instructions.
 
-            Contents
-            --------
+.. tabs::
 
-            1. `Accessing Diagnostic Records <#accessing-diagnostic-records-web>`_
-            2. `Adding a New Diagnostic Record <#adding-a-new-diagnostic-record-web>`_
-            3. `Updating an Existing Diagnostic Record <#updating-an-existing-diagnostic-record-web>`_
-            4. `Deleting a Diagnostic Record <#deleting-a-diagnostic-record-web>`_
+   .. tab:: Web Application
 
-            Accessing Diagnostic Records
-            ----------------------------
+      Patient Records Management
+      ===========================
 
-            1. **Log in to the System:**
+      The Patient Records feature allows healthcare professionals to manage patient information efficiently in the web application.
 
-                - Open your web browser and navigate to the login page of the Diagnostic Records Management System.
-                - Enter your username and password, then click on the "Login" button.
+      Contents
+      --------
 
-            2. **Navigate to Diagnostic Records:**
+      1. `Accessing Patient Records <#accessing-patient-records-web>`_
+      2. `Adding a New Patient Record <#adding-a-new-patient-record-web>`_
+      3. `Updating an Existing Patient Record <#updating-an-existing-patient-record-web>`_
+      4. `Deleting a Patient Record <#deleting-a-patient-record-web>`_
 
-                - Once logged in, locate the main menu on the left-hand side of the dashboard.
-                - Click on the "Diagnostic Records" option to access the diagnostic records module.
+      Accessing Patient Records
+      -------------------------
 
-            3. **Search for a Diagnostic Record:**
+      1. **Log in to the System:**
 
-                - Use the search bar at the top of the Diagnostic Records page.
-                - Enter the patient's name, diagnostic test ID, or other identifying information.
-                - Click on the "Search" button to display the diagnostic records.
+         - Open your web browser and navigate to the login page of the healthcare application.
+         - Enter your username and password, then click on the "Login" button.
 
-            Adding a New Diagnostic Record
-            ------------------------------
+      2. **Navigate to Patient Records:**
 
-            1. **Access the Diagnostic Records Module:**
+         - Once logged in, locate the main menu on the left-hand side of the dashboard.
+         - Click on the "Patient Records" option to access the patient records module.
 
-                - Follow the steps outlined in the `Accessing Diagnostic Records <#accessing-diagnostic-records-web>`_ section.
+      3. **Search for a Patient:**
 
-            2. **Add a New Record:**
+         - Use the search bar at the top of the Patient Records page.
+         - Enter the patient's name, ID, or other identifying information.
+         - Click on the "Search" button to display the patient's records.
 
-                - Click on the "Add New Diagnostic Record" button, usually located at the top-right corner of the Diagnostic Records page.
-                - Fill out the diagnostic record form. Required fields may include:
-                - Patient ID
-                - Test Date
-                - Diagnostic Test Type
-                - Test Results
-                - Diagnosing Physician
-                - Additional Notes
+      Adding a New Patient Record
+      ---------------------------
 
-            3. **Save the New Record:**
+      1. **Access the Patient Records Module:**
 
-                - After completing the form, review the information for accuracy.
-                - Click the "Save" or "Submit" button to add the new diagnostic record to the system.
+         - Follow the steps outlined in the `Accessing Patient Records <#accessing-patient-records-web>`_ section.
 
-            Updating an Existing Diagnostic Record
-            --------------------------------------
+      2. **Add a New Record:**
 
-            1. **Locate the Diagnostic Record:**
+         - Click on the "Add New Patient" button, usually located at the top-right corner of the Patient Records page.
+         - Fill out the patient information form. Required fields may include:
+           - Full Name
+           - Date of Birth
+           - Gender
+           - Contact Information (phone number, email, address)
+           - Medical History
+           - Current Medications
 
-                - Follow the steps in the `Accessing Diagnostic Records <#accessing-diagnostic-records-web>`_ section to find the specific diagnostic record you wish to update.
+      3. **Save the New Record:**
 
-            2. **Edit the Record:**
+         - After completing the form, review the information for accuracy.
+         - Click the "Save" or "Submit" button to add the new patient record to the system.
 
-                - Click on the diagnostic record ID or the "Edit" button next to the record.
-                - Update the necessary information in the diagnostic record form.
+      Updating an Existing Patient Record
+      -----------------------------------
 
-            3. **Save Changes:**
+      1. **Locate the Patient Record:**
 
-                - Once you have made the necessary updates, click the "Save" or "Update" button to save the changes to the diagnostic record.
+         - Follow the steps in the `Accessing Patient Records <#accessing-patient-records-web>`_ section to find the specific patient record you wish to update.
 
-            Deleting a Diagnostic Record
-            ----------------------------
+      2. **Edit the Record:**
 
-            1. **Find the Diagnostic Record:**
+         - Click on the patient's name or the "Edit" button next to the patient's record.
+         - Update the necessary information in the patient record form.
 
-                - Follow the steps in the `Accessing Diagnostic Records <#accessing-diagnostic-records-web>`_ section to locate the diagnostic record you want to delete.
+      3. **Save Changes:**
 
-            2. **Delete the Record:**
+         - Once you have made the necessary updates, click the "Save" or "Update" button to save the changes to the patient's record.
 
-                - Click on the "Delete" button next to the diagnostic record.
-                - Confirm the deletion in the pop-up confirmation dialog box.
+      Deleting a Patient Record
+      -------------------------
 
-            3. **Verify Deletion:**
+      1. **Find the Patient Record:**
 
-                - Ensure the diagnostic record has been removed from the system by performing a search for the record’s ID or patient name. The record should no longer appear in the search results.
+         - Follow the steps in the `Accessing Patient Records <#accessing-patient-records-web>`_ section to locate the patient record you want to delete.
 
-            Additional Tips
-            ---------------
+      2. **Delete the Record:**
 
-            - **Data Privacy:** Always ensure diagnostic data is handled in compliance with relevant privacy laws and regulations (e.g., HIPAA in the United States).
-            - **Regular Backups:** Regularly back up diagnostic records to prevent data loss.
-            - **User Permissions:** Ensure only authorized personnel have access to add, update, or delete diagnostic records to maintain data integrity and security.
+         - Click on the "Delete" button next to the patient's record.
+         - Confirm the deletion in the pop-up confirmation dialog box.
 
-    .. tab:: Mobile Application
+      3. **Verify Deletion:**
 
+         - Ensure the patient record has been removed from the system by performing a search for the patient’s name or ID. The record should no longer appear in the search results.
+
+      Additional Tips
+      ---------------
+
+      - **Data Privacy:** Always ensure patient data is handled in compliance with relevant privacy laws and regulations (e.g., HIPAA in the United States).
+      - **Regular Backups:** Regularly back up patient records to prevent data loss.
+      - **User Permissions:** Ensure only authorized personnel have access to add, update, or delete patient records to maintain data integrity and security.
+
+
+
+   .. tab:: Mobile Application
+
+      Patient Records Management
+      ===========================
+
+      The Patient Records feature allows healthcare professionals to manage patient information efficiently in the mobile application.
+
+      Contents
+      --------
+
+      1. `Accessing Patient Records <#accessing-patient-records-mobile>`_
+      2. `Adding a New Patient Record <#adding-a-new-patient-record-mobile>`_
+      3. `Updating an Existing Patient Record <#updating-an-existing-patient-record-mobile>`_
+      4. `Deleting a Patient Record <#deleting-a-patient-record-mobile>`_
+
+      Accessing Patient Records
+      -------------------------
+
+      1. **Open the App:**
+
+         - Tap the app icon on your mobile device to open the healthcare application.
+         - Enter your username and password, then tap on the "Login" button.
+
+      2. **Navigate to Patient Records:**
+
+         - Tap the menu icon (usually three horizontal lines) in the top-left corner of the screen.
+         - Select "Patient Records" from the menu options to access the patient records module.
+
+      3. **Search for a Patient:**
+
+         - Tap the search icon at the top of the Patient Records page.
+         - Enter the patient's name, ID, or other identifying information.
+         - Tap on the "Search" button to display the patient's records.
+
+      Adding a New Patient Record
+      ---------------------------
+
+      1. **Access the Patient Records Module:**
+
+         - Follow the steps outlined in the `Accessing Patient Records <#accessing-patient-records-mobile>`_ section.
+
+      2. **Add a New Record:**
+
+         - Tap the "Add" button, usually represented by a plus (+) icon, at the bottom-right corner of the Patient Records page.
+         - Fill out the patient information form. Required fields may include:
+           - Full Name
+           - Date of Birth
+           - Gender
+           - Contact Information (phone number, email, address)
+           - Medical History
+           - Current Medications
+
+      3. **Save the New Record:**
+
+         - After completing the form, review the information for accuracy.
+         - Tap the "Save" or "Submit" button to add the new patient record to the system.
+
+      Updating an Existing Patient Record
+      -----------------------------------
+
+      1. **Locate the Patient Record:**
+
+         - Follow the steps in the `Accessing Patient Records <#accessing-patient-records-mobile>`_ section to find the specific patient record you wish to update.
+
+      2. **Edit the Record:**
+
+         - Tap on the patient's name or the "Edit" button next to the patient's record.
+         - Update the necessary information in the patient record form.
+
+      3. **Save Changes:**
+
+         - Once you have made the necessary updates, tap the "Save" or "Update" button to save the changes to the patient's record.
+
+      Deleting a Patient Record
+      -------------------------
+
+      1. **Find the Patient Record:**
+
+         - Follow the steps in the `Accessing Patient Records <#accessing-patient-records-mobile>`_ section to locate the patient record you want to delete.
+
+      2. **Delete the Record:**
+
+         - Tap on the "Delete" button next to the patient's record.
+         - Confirm the deletion in the pop-up confirmation dialog box.
+
+      3. **Verify Deletion:**
+
+         - Ensure the patient record has been removed from the system by performing a search for the patient’s name or ID. The record should no longer appear in the search results.
+
+      Additional Tips
+      ---------------
+
+      - **Data Privacy:** Always ensure patient data is handled in compliance with relevant privacy laws and regulations (e.g., HIPAA in the United States).
+      - **Regular Backups:** Regularly back up patient records to prevent data loss.
+      - **User Permissions:** Ensure only authorized personnel have access to add, update, or delete patient records to maintain data integrity and security.
+
+      Diagnostic Records Management
+      =============================
+
+      The Diagnostic Records Management System allows healthcare professionals to manage and maintain diagnostic records efficiently in the mobile application.
 
       Contents
       --------
