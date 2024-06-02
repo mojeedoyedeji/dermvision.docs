@@ -50,18 +50,25 @@ API
     Bob --> Bob: How are you?
     @enduml  
      
+Get all patient record
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**URL:** `/patient/`
-
-Get all patient records
+**Endpoint URL** `/patient/`
 
 **Method:** `GET`
+
+**Description:**  Get all patient records
 
 **Headers:**
 - `Authorization`: `Bearer <token>`
 - `Content-Type`: `application/json`
 
 **Parameters:**
+
+- `id` (path parameter): The unique identifier of the user.
+
+
+**Body:**
 
 - `id` (path parameter): The unique identifier of the user.
 
