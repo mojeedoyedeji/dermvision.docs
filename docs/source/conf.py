@@ -20,7 +20,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
-    'sphinxcontrib.plantuml'
+    'sphinxcontrib.plantuml',
     'sphinx_tabs.tabs'
 ]
 
