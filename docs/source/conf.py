@@ -46,7 +46,7 @@ html_static_path = ['_static']
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
 
-plantuml = 'java -jar /path/to/plantuml.jar'
+plantuml = 'java -jar /usr/local/bin/plantuml.jar'
 
 sphinx_tabs_valid_builders = ['linkcheck']
 sphinx_tabs_disable_tab_closing = True
