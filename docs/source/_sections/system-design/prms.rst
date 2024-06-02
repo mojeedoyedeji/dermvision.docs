@@ -287,4 +287,4 @@ Update patient record
     .catch(error => console.error('Error:', error));
 
 
-Next: :ref:`system-design-prms`
+Next: :ref:`system-design-drms`
