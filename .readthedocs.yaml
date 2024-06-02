@@ -5,6 +5,9 @@ build:
   tools:
     python: "3.10"
 
+  apt_packages:
+    - plantuml
+
 python:
   install:
     - requirements: docs/requirements.txt

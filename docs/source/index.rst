@@ -23,6 +23,30 @@ Introduction
    This project is under active development.
 
 
+
+@startuml
+skinparam DefaultFontName Source Code Pro
+skinparam DefaultFontSize 15
+skinparam RankSep 50
+
+package "eCommerce" {
+  node "High Level Components" {
+    component ProductCatalog
+  }
+
+  node "Abstractions" {
+    component ProductFactory
+  }
+
+  node "Low Level Components" {
+    component SQLProductRepository
+  }
+
+  ProductCatalog ..> ProductFactory: depends on
+  ProductFactory ..> SQLProductRepository: depends on
+}
+@enduml
+
 Core Features
 ^^^^^^^^^^^^
 
