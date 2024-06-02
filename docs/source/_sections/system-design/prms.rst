@@ -51,7 +51,9 @@ API
     @enduml  
      
 
-**URL:** `/api/user/{id}`
+**URL:** `/patient/`
+
+Get all patient records
 
 **Method:** `GET`
 
