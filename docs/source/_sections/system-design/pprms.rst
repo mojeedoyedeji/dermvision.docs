@@ -19,20 +19,20 @@ as it contains the primary data necessary for identifying and managing prescript
    :widths: 20, 40, 20, 20
 
    "_id", "A unique identifier for each patient.", "Integer", "Primary Key, Auto-increment, Not Null"
-   "derma", "The first name of the patient.", "Varchar(50)", "Not Null"
-   "patient", "The last name of the patient.", "Varchar(50)", "Not Null"
-   "type", "The date of birth of the patient.", "Date", "Not Null"
-   "mode", "The gender of the patient.", "Varchar(10)", "Not Null"
-   "title", "The contact number of the patient.", "Varchar(15)", "Not Null"
-   "description", "The email address of the patient.", "Varchar(100)", "Unique, Not Null"
-   "dosage_quantity", "The residential address of the patient.", "Varchar(255)", "Not Null"
-   "dosage_unit", "The emergency contact details for the patient.", "Varchar(255)", "Not Null"
-   "duration_number", "A summary of the patient's medical history.", "Text", "Nullable"
-   "duration_period", "A summary of the patient's medical history.", "Text", "Nullable"
-   "frequency_value", "A summary of the patient's medical history.", "Text", "Nullable"
-   "frequency_period", "A summary of the patient's medical history.", "Text", "Nullable"
-   "created", "A summary of the patient's medical history.", "Text", "Nullable"
-   "modified", "A summary of the patient's medical history.", "Text", "Nullable" 
+   "derma", "", "Varchar(50)", "Not Null"
+   "patient", "", "Varchar(50)", "Not Null"
+   "type", "", "Date", "Not Null"
+   "mode", "", "Varchar(10)", "Not Null"
+   "title", "", "Varchar(15)", "Not Null"
+   "description", "", "Varchar(100)", "Unique, Not Null"
+   "dosage_quantity", "", "Varchar(255)", "Not Null"
+   "dosage_unit", "", "Varchar(255)", "Not Null"
+   "duration_number", "", "Text", "Nullable"
+   "duration_period", "", "Text", "Nullable"
+   "frequency_value", "", "Text", "Nullable"
+   "frequency_period", "", "Text", "Nullable"
+   "created", "", "Text", "Nullable"
+   "modified", "", "Text", "Nullable" 
 
 **Relationships**
 
@@ -67,17 +67,21 @@ API
       
       @enduml
 
-**URL:** `/api/user/{id}`
+Get all clinical notes
+~~~~~~~~~~~~~~~~~~~~~~
+
+**Endpoint URL:** `/treatment`
 
 **Method:** `GET`
 
+**Description:**  Get all treatment records
+
 **Headers:**
-- `Authorization`: `Bearer <token>`
-- `Content-Type`: `application/json`
 
-**Parameters:**
+.. code-block:: http
 
-- `id` (path parameter): The unique identifier of the user.
+    Authorization: Bearer {token}
+    Content-Type: application/json
 
 **Response:**
 - `200 OK`: A JSON object containing user data.
@@ -88,8 +92,8 @@ API
 
 .. code-block:: javascript
 
-    fetch('https://api.example.com/api/user/123', {
-        method: 'GET',
+    fetch('https://api.dermvision.com/treatment', {
+        method: 'POST',
         headers: {
             'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
             'Content-Type': 'application/json'
@@ -99,14 +103,52 @@ API
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 
-**Example Response:**
+
+Create new treatment record
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Endpoint URL:** `/treatment/add`
+
+**Method:** `POST`
+
+**Description:**  Add new treatment record
+
+**Headers:**
+
+.. code-block:: http
+
+    Authorization: Bearer {token}
+    Content-Type: application/json
+
+**Body:**
 
 .. code-block:: json
 
     {
-        "id": 123,
-        "name": "John Doe",
-        "email": "john.doe@example.com",
-        "created_at": "2023-05-28T12:34:56Z"
+        "image": 123,
+        "x": "John Doe",
+        "y": "john.doe@example.com",
+        "z": "+966507133905"
+        "a": "08-Nov-1980" 
     }
 
+**Response:**
+- `200 OK`: A JSON object containing user data.
+- `404 Not Found`: If the user does not exist.
+- `401 Unauthorized`: If the authentication token is invalid or missing.
+
+**Example Request:**
+
+.. code-block:: javascript
+
+    fetch('https://api.dermvision.com/treatment/add', {
+        method: 'POST',
+        headers: {
+            'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+            'Content-Type': 'application/json'
+        },
+        body: body
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
