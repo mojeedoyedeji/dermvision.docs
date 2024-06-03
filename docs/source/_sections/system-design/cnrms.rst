@@ -260,7 +260,7 @@ Fetch note records for a patient
 
 .. code-block:: javascript
 
-    fetch('https://api.dermvision.com/diagnostic/patient/1234', {
+    fetch('https://api.dermvision.com/notes/patient/1234', {
         method: 'POST',
         headers: {
             'Authorization': 'Bearer YOUR_ACCESS_TOKEN',

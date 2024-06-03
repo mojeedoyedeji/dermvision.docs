@@ -231,7 +231,7 @@ Fetch treatment records by dermatologist
 
 .. code-block:: javascript
 
-    fetch('https://api.dermvision.com/diagnostic/derma/1234', {
+    fetch('https://api.dermvision.com/treatment/derma/1234', {
         method: 'POST',
         headers: {
             'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
@@ -271,7 +271,7 @@ Fetch note records for a patient
 
 .. code-block:: javascript
 
-    fetch('https://api.dermvision.com/diagnostic/patient/1234', {
+    fetch('https://api.dermvision.com/treatment/patient/1234', {
         method: 'POST',
         headers: {
             'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
