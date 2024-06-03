@@ -57,17 +57,21 @@ API
       
       @enduml
 
-**URL:** `/api/user/{id}`
+Get all clinical notes
+~~~~~~~~~~~~~~~~~~~~~~
+
+**Endpoint URL:** `/notes`
 
 **Method:** `GET`
 
+**Description:**  Get all clinical notes
+
 **Headers:**
-- `Authorization`: `Bearer <token>`
-- `Content-Type`: `application/json`
 
-**Parameters:**
+.. code-block:: http
 
-- `id` (path parameter): The unique identifier of the user.
+    Authorization: Bearer {token}
+    Content-Type: application/json
 
 **Response:**
 - `200 OK`: A JSON object containing user data.
@@ -78,8 +82,8 @@ API
 
 .. code-block:: javascript
 
-    fetch('https://api.example.com/api/user/123', {
-        method: 'GET',
+    fetch('https://api.dermvision.com/notes', {
+        method: 'POST',
         headers: {
             'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
             'Content-Type': 'application/json'
@@ -89,14 +93,31 @@ API
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 
-**Example Response:**
+
+Create new clinical note
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Endpoint URL:** `/notes/add`
+
+**Method:** `POST`
+
+**Description:**  Add new clinical note
+
+**Headers:**
+
+.. code-block:: http
+
+    Authorization: Bearer {token}
+    Content-Type: application/json
+
+**Body:**
 
 .. code-block:: json
 
     {
-        "id": 123,
-        "name": "John Doe",
-        "email": "john.doe@example.com",
-        "created_at": "2023-05-28T12:34:56Z"
+        "image": 123,
+        "x": "John Doe",
+        "y": "john.doe@example.com",
+        "z": "+966507133905"
+        "a": "08-Nov-1980" 
     }
-

@@ -53,7 +53,7 @@ for identifying and managing patient records.
    "Derma", "One-to-Many", "A dermatologists can create multiple diagnostic records.", "Dermatologist", "DermatologistID in the Diagnostic table references _id in the Dermatologist table."
    
 
-   API
+API
 ^^^
 .. uml::
 
