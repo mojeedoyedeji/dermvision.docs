@@ -37,9 +37,6 @@ as it contains the primary data necessary for identifying and managing model ver
    :widths: 20, 20, 40, 20, 20
 
   
-
-API
-^^^
 .. uml::
 
       @startuml
@@ -59,15 +56,31 @@ API
       
       @enduml
 
-**URL:** `/api/user/{id}`
+
+API
+^^^
+Get all model records
+~~~~~~~~~~~~~~~~~~~~~
+
+**Endpoint URL:** `/library/`
 
 **Method:** `GET`
 
+**Description:**  Get all model records
+
 **Headers:**
-- `Authorization`: `Bearer <token>`
-- `Content-Type`: `application/json`
+
+.. code-block:: http
+
+    Authorization: Bearer {token}
+    Content-Type: application/json
 
 **Parameters:**
+
+- `id` (path parameter): The unique identifier of the user.
+
+
+**Body:**
 
 - `id` (path parameter): The unique identifier of the user.
 
@@ -80,7 +93,7 @@ API
 
 .. code-block:: javascript
 
-    fetch('https://api.example.com/api/user/123', {
+    fetch('https://api.dermvision.com/library/', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
@@ -101,4 +114,5 @@ API
         "email": "john.doe@example.com",
         "created_at": "2023-05-28T12:34:56Z"
     }
+
 
