@@ -199,7 +199,7 @@ Fetch notes by dermatologist
 
 **Method:** `GET`
 
-**Description:**  Get diagnostic records by a dermatologist
+**Description:**  Get clinical records by a dermatologist
 
 **Headers:**
 
