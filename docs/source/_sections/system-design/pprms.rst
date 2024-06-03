@@ -243,14 +243,14 @@ Fetch treatment records by dermatologist
     .catch(error => console.error('Error:', error));
 
 
-Fetch note records for a patient
+Fetch treatment records for a patient
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Endpoint URL:** `/notes/patient/:id`
+**Endpoint URL:** `/treatment/patient/:id`
 
 **Method:** `GET`
 
-**Description:**  Get clinical notes records for a patient
+**Description:**  Get treatment records for a patient
 
 **Headers:**
 
