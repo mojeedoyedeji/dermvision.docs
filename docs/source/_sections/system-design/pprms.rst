@@ -19,20 +19,20 @@ as it contains the primary data necessary for identifying and managing prescript
    :widths: 20, 40, 20, 20
 
    "_id", "A unique identifier for each patient.", "Integer", "Primary Key, Auto-increment, Not Null"
-   "derma", "", "Varchar(50)", "Not Null"
-   "patient", "", "Varchar(50)", "Not Null"
-   "type", "", "Date", "Not Null"
-   "mode", "", "Varchar(10)", "Not Null"
-   "title", "", "Varchar(15)", "Not Null"
-   "description", "", "Varchar(100)", "Unique, Not Null"
-   "dosage_quantity", "", "Varchar(255)", "Not Null"
-   "dosage_unit", "", "Varchar(255)", "Not Null"
-   "duration_number", "", "Text", "Nullable"
-   "duration_period", "", "Text", "Nullable"
-   "frequency_value", "", "Text", "Nullable"
-   "frequency_period", "", "Text", "Nullable"
-   "created", "", "Text", "Nullable"
-   "modified", "", "Text", "Nullable" 
+   "derma", "", "", "Not Null"
+   "patient", "", "", "Not Null"
+   "type", "", "", "Not Null"
+   "mode", "", "", "Not Null"
+   "title", "", "", "Not Null"
+   "description", "", "", "Not Null"
+   "dosage_quantity", "", "", "Not Null"
+   "dosage_unit", "", "", "Not Null"
+   "duration_number", "", "", "Nullable"
+   "duration_period", "", "", "Nullable"
+   "frequency_value", "", "", "Nullable"
+   "frequency_period", "", "", "Nullable"
+   "created", "", "DateTime", "Not Null"
+   "modified", "", "DateTime", "Not Null" 
 
 **Relationships**
 
@@ -104,6 +104,14 @@ Get all clinical notes
     .catch(error => console.error('Error:', error));
 
 
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }
+
 Create new treatment record
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -125,11 +133,7 @@ Create new treatment record
 .. code-block:: json
 
     {
-        "image": 123,
-        "x": "John Doe",
-        "y": "john.doe@example.com",
-        "z": "+966507133905"
-        "a": "08-Nov-1980" 
+        
     }
 
 **Response:**
@@ -154,6 +158,14 @@ Create new treatment record
     .catch(error => console.error('Error:', error));
 
 
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }
+
 Update treatment record
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -175,11 +187,7 @@ Update treatment record
 .. code-block:: json
 
     {
-        "image": 123,
-        "x": "John Doe",
-        "y": "john.doe@example.com",
-        "z": "+966507133905"
-        "a": "08-Nov-1980" 
+        
     }
 
 **Response:**
@@ -202,6 +210,14 @@ Update treatment record
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
+
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }
 
 Fetch treatment records by dermatologist
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -242,6 +258,14 @@ Fetch treatment records by dermatologist
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }
+
 
 Fetch treatment records for a patient
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -281,3 +305,11 @@ Fetch treatment records for a patient
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
+
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }
