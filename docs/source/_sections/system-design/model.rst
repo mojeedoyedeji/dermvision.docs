@@ -75,15 +75,6 @@ Get all model records
     Authorization: Bearer {token}
     Content-Type: application/json
 
-**Parameters:**
-
-- `id` (path parameter): The unique identifier of the user.
-
-
-**Body:**
-
-- `id` (path parameter): The unique identifier of the user.
-
 **Response:**
 - `200 OK`: A JSON object containing user data.
 - `404 Not Found`: If the user does not exist.
@@ -109,10 +100,171 @@ Get all model records
 .. code-block:: json
 
     {
-        "id": 123,
-        "name": "John Doe",
-        "email": "john.doe@example.com",
-        "created_at": "2023-05-28T12:34:56Z"
+      
     }
 
 
+Add model to library
+~~~~~~~~~~~~~~~~~~~~
+
+**Endpoint URL:** `/library/add`
+
+**Method:** `POST`
+
+**Description:**  Add model to library
+
+**Headers:**
+
+.. code-block:: http
+
+    Authorization: Bearer {token}
+    Content-Type: application/json
+
+
+**Body:**
+
+.. code-block:: json
+
+    {
+        
+    }
+
+
+**Response:**
+- `200 OK`: A JSON object containing user data.
+- `404 Not Found`: If the user does not exist.
+- `401 Unauthorized`: If the authentication token is invalid or missing.
+
+**Example Request:**
+
+.. code-block:: javascript
+
+    fetch('https://api.dermvision.com/library/add', {
+        method: 'POST',
+        headers: {
+            'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+**Example Response:**
+
+.. code-block:: json
+
+    {
+      
+    }
+
+
+Update model record
+~~~~~~~~~~~~~~~~~~~
+
+**Endpoint URL:** `/library/update`
+
+**Method:** `POST`
+
+**Description:**  Update model record
+
+**Headers:**
+
+.. code-block:: http
+
+    Authorization: Bearer {token}
+    Content-Type: application/json
+
+
+**Body:**
+
+.. code-block:: json
+
+    {
+        
+    }
+
+
+**Response:**
+- `200 OK`: A JSON object containing user data.
+- `404 Not Found`: If the user does not exist.
+- `401 Unauthorized`: If the authentication token is invalid or missing.
+
+**Example Request:**
+
+.. code-block:: javascript
+
+    fetch('https://api.dermvision.com/library/update', {
+        method: 'POST',
+        headers: {
+            'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+**Example Response:**
+
+.. code-block:: json
+
+    {
+        
+    }
+
+
+
+Make model default
+~~~~~~~~~~~~~~~~~~~~
+
+**Endpoint URL:** `/library/default`
+
+**Method:** `POST`
+
+**Description:**  Make a model default for diagnosis tasks
+
+**Headers:**
+
+.. code-block:: http
+
+    Authorization: Bearer {token}
+    Content-Type: application/json
+
+
+**Body:**
+
+.. code-block:: json
+
+    {
+        
+    }
+
+
+**Response:**
+- `200 OK`: A JSON object containing user data.
+- `404 Not Found`: If the user does not exist.
+- `401 Unauthorized`: If the authentication token is invalid or missing.
+
+**Example Request:**
+
+.. code-block:: javascript
+
+    fetch('https://api.dermvision.com/library/default', {
+        method: 'POST',
+        headers: {
+            'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }
