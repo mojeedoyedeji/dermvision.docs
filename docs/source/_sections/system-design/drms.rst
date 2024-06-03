@@ -99,7 +99,57 @@ Get all diagnostic records
 
 .. code-block:: javascript
 
-    fetch('https://api.dermvision.com/patient/add', {
+    fetch('https://api.dermvision.com/diagnostic', {
+        method: 'POST',
+        headers: {
+            'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+
+Perform a diagnosis
+~~~~~~~~~~~~~~~~~~~
+
+**Endpoint URL:** `/diagnostic/diagnose`
+
+**Method:** `POST`
+
+**Description:**  Perform a diagnosis using image and clinical data
+
+**Headers:**
+
+.. code-block:: http
+
+    Authorization: Bearer {token}
+    Content-Type: application/json
+
+**Body:**
+
+.. code-block:: json
+
+    {
+        "image": 123,
+        "x": "John Doe",
+        "y": "john.doe@example.com",
+        "z": "+966507133905"
+        "a": "08-Nov-1980" 
+    }
+
+
+**Response:**
+- `200 OK`: A JSON object containing user data.
+- `404 Not Found`: If the user does not exist.
+- `401 Unauthorized`: If the authentication token is invalid or missing.
+
+**Example Request:**
+
+.. code-block:: javascript
+
+    fetch('https://api.dermvision.com/diagnostic/diagnose', {
         method: 'POST',
         headers: {
             'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
