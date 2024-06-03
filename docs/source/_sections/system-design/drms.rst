@@ -21,26 +21,26 @@ for identifying and managing patient records.
    :widths: 20, 40, 20, 20
 
    "_id", "A unique identifier for each patient.", "Integer", "Primary Key, Auto-increment, Not Null"
-   "image", "The first name of the patient.", "Varchar(50)", "Not Null"
-   "patient", "The last name of the patient.", "Varchar(50)", "Not Null"
-   "age", "The date of birth of the patient.", "Date", "Not Null"
-   "gender", "The gender of the patient.", "Varchar(10)", "Not Null"
-   "bleeding", "", "Varchar(15)", "Not Null"
-   "elevation", "", "Varchar(100)", "Unique, Not Null"
-   "changed", "", "Varchar(255)", "Not Null"
-   "hurt", "", "Varchar(255)", "Not Null"
-   "grew", "", "Text", "Nullable"
-   "itchy", "", "Text", "Nullable"
-   "region", "", "Text", "Nullable"
-   "location", "", "Text", "Nullable"
-   "tone", "", "Text", "Nullable"
-   "symptoms", "", "Text", "Nullable"
-   "cam", "", "Text", "Nullable"
-   "prediction", "", "Text", "Nullable"
-   "probabilities", "", "Text", "Nullable"
-   "derma", "", "Text", "Nullable"
-   "created", "", "Text", "Nullable"
-   "modified", "", "Text", "Nullable"
+   "image", "The first name of the patient.", "", "Not Null"
+   "patient", "The last name of the patient.", "", "Not Null"
+   "age", "The date of birth of the patient.", "", "Not Null"
+   "gender", "The gender of the patient.", "", "Not Null"
+   "bleeding", "", "", "Not Null"
+   "elevation", "", "", "Not Null"
+   "changed", "", "", "Not Null"
+   "hurt", "", "", "Not Null"
+   "grew", "", "", "Not Null"
+   "itchy", "", "", "Not Nullable"
+   "region", "", "", "Not Nullable"
+   "location", "", "", "Not Nullable"
+   "tone", "", "", "Not Nullable"
+   "symptoms", "", "", "Not Nullable"
+   "cam", "", "", "Not Nullable"
+   "prediction", "", "", "Not Nullable"
+   "probabilities", "", "", "Not Nullable"
+   "derma", "", "", "Not Nullable"
+   "created", "", "", "Not Nullable"
+   "modified", "", "", "Not Nullable"
 
 
 **Relationships**
@@ -110,6 +110,13 @@ Get all diagnostic records
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }
 
 Perform a diagnosis
 ~~~~~~~~~~~~~~~~~~~
@@ -132,11 +139,7 @@ Perform a diagnosis
 .. code-block:: json
 
     {
-        "image": 123,
-        "x": "John Doe",
-        "y": "john.doe@example.com",
-        "z": "+966507133905"
-        "a": "08-Nov-1980" 
+        
     }
 
 
@@ -160,6 +163,13 @@ Perform a diagnosis
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }
 
 Save diagnosis result
 ~~~~~~~~~~~~~~~~~~~~~
@@ -182,11 +192,7 @@ Save diagnosis result
 .. code-block:: json
 
     {
-        "image": 123,
-        "x": "John Doe",
-        "y": "john.doe@example.com",
-        "z": "+966507133905"
-        "a": "08-Nov-1980" 
+        
     }
 
 
@@ -210,6 +216,13 @@ Save diagnosis result
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }
 
 Fetch diagnostic records by dermatologist
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -251,6 +264,14 @@ Fetch diagnostic records by dermatologist
     .catch(error => console.error('Error:', error));
 
 
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }
+
 Fetch diagnostic records for a patient
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -289,3 +310,11 @@ Fetch diagnostic records for a patient
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
+
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }

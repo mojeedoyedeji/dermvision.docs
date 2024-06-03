@@ -20,15 +20,15 @@ as it contains the primary data necessary for identifying and managing patient r
    :widths: 20, 40, 20, 20
 
    "_id", "A unique identifier for each patient.", "Integer", "Primary Key, Auto-increment, Not Null"
-   "name", "The full name of the patient.", "Varchar(50)", "Not Null"
-   "email", "The email address of the patient", "Varchar(50)", "Not Null"
-   "phone", "The phone number of the patient", "Date", "Not Null"
-   "nationality", "The nationality of the patient", "Varchar(10)", "Not Null"
-   "gender", "The gender of the patient", "Varchar(15)", "Not Null"
-   "dob", "The date of birth of the patient", "Varchar(100)", "Unique, Not Null"
-   "derma", "The id of the dermatologist that created the patient record", "Varchar(255)", "Not Null"
-   "created", "The date the record was created", "Varchar(255)", "Not Null"
-   "updated", "The date the record was updated", "Text", "Nullable"
+   "name", "The full name of the patient.", "", "Not Null"
+   "email", "The email address of the patient", "", "Not Null"
+   "phone", "The phone number of the patient", "", "Not Null"
+   "nationality", "The nationality of the patient", "", "Not Null"
+   "gender", "The gender of the patient", "", "Not Null"
+   "dob", "The date of birth of the patient", "", "Unique, Not Null"
+   "derma", "The id of the dermatologist that created the patient record", "", "Not Null"
+   "created", "The date the record was created", "", "Not Null"
+   "updated", "The date the record was updated", "", "Nullable"
 
 
 **Relationships**
@@ -82,15 +82,6 @@ Get all patient record
     Authorization: Bearer {token}
     Content-Type: application/json
 
-**Parameters:**
-
-- `id` (path parameter): The unique identifier of the user.
-
-
-**Body:**
-
-- `id` (path parameter): The unique identifier of the user.
-
 **Response:**
 - `200 OK`: A JSON object containing user data.
 - `404 Not Found`: If the user does not exist.
@@ -116,10 +107,7 @@ Get all patient record
 .. code-block:: json
 
     {
-        "id": 123,
-        "name": "John Doe",
-        "email": "john.doe@example.com",
-        "created_at": "2023-05-28T12:34:56Z"
+        
     }
 
 Add new patient record
@@ -178,10 +166,7 @@ Add new patient record
 .. code-block:: json
 
     {
-        "id": 123,
-        "name": "John Doe",
-        "email": "john.doe@example.com",
-        "created_at": "2023-05-28T12:34:56Z"
+     
     }
 
 Get all patients belonging to a dermatologist
@@ -231,10 +216,7 @@ Get all patients belonging to a dermatologist
 .. code-block:: json
 
     {
-        "id": 123,
-        "name": "John Doe",
-        "email": "john.doe@example.com",
-        "created_at": "2023-05-28T12:34:56Z"
+        
     }
 
 
@@ -259,11 +241,7 @@ Update patient record
 .. code-block:: json
 
     {
-        "derma": 123,
-        "name": "John Doe",
-        "email": "john.doe@example.com",
-        "phone": "+966507133905"
-        "dob": "08-Nov-1980" 
+      
     }
 
 **Response:**
@@ -287,3 +265,10 @@ Update patient record
     .catch(error => console.error('Error:', error));
 
 
+**Example Response:**
+
+.. code-block:: json
+
+    {
+        
+    }

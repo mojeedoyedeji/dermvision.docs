@@ -18,13 +18,13 @@ This table is essential for managing and tracking clinical notes related to pati
    :widths: 20, 40, 20, 20
 
    "_id", "A unique identifier for each clinical note.", "Integer", "Primary Key, Auto-increment, Not Null"
-   "title", "The ID of the patient associated with the note.", "Integer", "Foreign Key, Not Null"
-   "note", "The date of the clinical note.", "Date", "Not Null"
-   "derma", "The content of the clinical note.", "Text", "Not Null"
-   "patient", "The ID of the healthcare provider.", "Integer", "Not Null"
-   "created", "The ID of the healthcare provider.", "Integer", "Not Null"
-   "modified", "The ID of the healthcare provider.", "Integer", "Not Null"
-   "deleted", "The ID of the healthcare provider.", "Integer", "Not Null"
+   "title", "", "", "Not Null"
+   "note", "", "", "Not Null"
+   "derma", "", "", "Not Null"
+   "patient", "", "", "Not Null"
+   "created", "", "", "Not Null"
+   "modified", "", "", "Not Null"
+   "deleted", "", "", "Not Null"
 
 
 **Relationships**
@@ -93,6 +93,13 @@ Get all clinical notes
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }
 
 Create clinical note
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -115,11 +122,7 @@ Create clinical note
 .. code-block:: json
 
     {
-        "image": 123,
-        "x": "John Doe",
-        "y": "john.doe@example.com",
-        "z": "+966507133905"
-        "a": "08-Nov-1980" 
+        
     }
 
 **Response:**
@@ -143,6 +146,16 @@ Create clinical note
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 
+
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }
+
+
 Update clinical note
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -164,11 +177,7 @@ Update clinical note
 .. code-block:: json
 
     {
-        "image": 123,
-        "x": "John Doe",
-        "y": "john.doe@example.com",
-        "z": "+966507133905"
-        "a": "08-Nov-1980" 
+       
     }
 
 **Response:**
@@ -191,6 +200,14 @@ Update clinical note
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
+
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }
 
 Fetch notes by dermatologist
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -231,6 +248,13 @@ Fetch notes by dermatologist
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }
 
 Fetch note records for a patient
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -270,3 +294,11 @@ Fetch note records for a patient
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
+
+**Example Response:**
+
+.. code-block:: json
+
+    {
+       
+    }
