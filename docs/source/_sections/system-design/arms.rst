@@ -67,3 +67,102 @@ as it contains the primary data necessary for identifying and managing patient r
 API
 ^^^
 
+Get all appointment records
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Endpoint URL:** `/appointment/`
+
+**Method:** `GET`
+
+**Description:**  Get all appointment records
+
+**Headers:**
+
+.. code-block:: http
+
+    Authorization: Bearer {token}
+    Content-Type: application/json
+
+**Response:**
+- `200 OK`: A JSON object containing user data.
+- `404 Not Found`: If the user does not exist.
+- `401 Unauthorized`: If the authentication token is invalid or missing.
+
+**Example Request:**
+
+.. code-block:: javascript
+
+    fetch('https://api.dermvision.com/apppointment/', {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+**Example Response:**
+
+.. code-block:: json
+
+    {
+        
+    }
+
+
+Add new appointment record
+~~~~~~~~~~~~~~~~~~~~~~
+
+**Endpoint URL:** `/appointment/add`
+
+**Method:** `POST`
+
+**Description:**  Add new patient record
+
+**Headers:**
+
+.. code-block:: http
+
+    Authorization: Bearer {token}
+    Content-Type: application/json
+
+
+
+**Body:**
+
+.. code-block:: json
+
+    {
+      
+    }
+
+
+**Response:**
+- `200 OK`: A JSON object containing user data.
+- `404 Not Found`: If the user does not exist.
+- `401 Unauthorized`: If the authentication token is invalid or missing.
+
+**Example Request:**
+
+.. code-block:: javascript
+
+    fetch('https://api.dermvision.com/appointment/add', {
+        method: 'POST',
+        headers: {
+            'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+**Example Response:**
+
+.. code-block:: json
+
+    {
+     
+    }
