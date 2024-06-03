@@ -25,22 +25,22 @@ for identifying and managing patient records.
    "patient", "The last name of the patient.", "Varchar(50)", "Not Null"
    "age", "The date of birth of the patient.", "Date", "Not Null"
    "gender", "The gender of the patient.", "Varchar(10)", "Not Null"
-   "bleeding", "The contact number of the patient.", "Varchar(15)", "Not Null"
-   "elevation", "The email address of the patient.", "Varchar(100)", "Unique, Not Null"
-   "changed", "The residential address of the patient.", "Varchar(255)", "Not Null"
-   "hurt", "The emergency contact details for the patient.", "Varchar(255)", "Not Null"
-   "grew", "A summary of the patient's medical history.", "Text", "Nullable"
-   "itchy", "A summary of the patient's medical history.", "Text", "Nullable"
-   "region", "A summary of the patient's medical history.", "Text", "Nullable"
-   "location", "A summary of the patient's medical history.", "Text", "Nullable"
-   "tone", "A summary of the patient's medical history.", "Text", "Nullable"
-   "symptoms", "A summary of the patient's medical history.", "Text", "Nullable"
-   "cam", "A summary of the patient's medical history.", "Text", "Nullable"
-   "prediction", "A summary of the patient's medical history.", "Text", "Nullable"
-   "probabilities", "A summary of the patient's medical history.", "Text", "Nullable"
-   "derma", "A summary of the patient's medical history.", "Text", "Nullable"
-   "created", "A summary of the patient's medical history.", "Text", "Nullable"
-   "modified", "A summary of the patient's medical history.", "Text", "Nullable"
+   "bleeding", "", "Varchar(15)", "Not Null"
+   "elevation", "", "Varchar(100)", "Unique, Not Null"
+   "changed", "", "Varchar(255)", "Not Null"
+   "hurt", "", "Varchar(255)", "Not Null"
+   "grew", "", "Text", "Nullable"
+   "itchy", "", "Text", "Nullable"
+   "region", "", "Text", "Nullable"
+   "location", "", "Text", "Nullable"
+   "tone", "", "Text", "Nullable"
+   "symptoms", "", "Text", "Nullable"
+   "cam", "", "Text", "Nullable"
+   "prediction", "", "Text", "Nullable"
+   "probabilities", "", "Text", "Nullable"
+   "derma", "", "Text", "Nullable"
+   "created", "", "Text", "Nullable"
+   "modified", "", "Text", "Nullable"
 
 
 **Relationships**
@@ -74,17 +74,21 @@ for identifying and managing patient records.
       
       @enduml
 
-**URL:** `/api/user/{id}`
+Get all diagnostic records
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Endpoint URL:** `/diagnostic`
 
 **Method:** `GET`
 
+**Description:**  Get all diagnostic records
+
 **Headers:**
-- `Authorization`: `Bearer <token>`
-- `Content-Type`: `application/json`
 
-**Parameters:**
+.. code-block:: http
 
-- `id` (path parameter): The unique identifier of the user.
+    Authorization: Bearer {token}
+    Content-Type: application/json
 
 **Response:**
 - `200 OK`: A JSON object containing user data.
@@ -95,8 +99,8 @@ for identifying and managing patient records.
 
 .. code-block:: javascript
 
-    fetch('https://api.example.com/api/user/123', {
-        method: 'GET',
+    fetch('https://api.dermvision.com/patient/add', {
+        method: 'POST',
         headers: {
             'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
             'Content-Type': 'application/json'
@@ -105,14 +109,3 @@ for identifying and managing patient records.
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
-
-**Example Response:**
-
-.. code-block:: json
-
-    {
-        "id": 123,
-        "name": "John Doe",
-        "email": "john.doe@example.com",
-        "created_at": "2023-05-28T12:34:56Z"
-    }
