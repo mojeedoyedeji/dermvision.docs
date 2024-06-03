@@ -9,7 +9,7 @@ Below is a detailed description of one of the key tables in the system: the **Ap
 
 Appointment Entity
 ^^^^^^^^^^^^^^^^^^
-The **Appointment** entity stores essential information about patients. This table is central to the Appointment Record Management System, 
+The **Appointment** entity stores essential information about appointment records. This table is central to the Appointment Record Management System, 
 as it contains the primary data necessary for identifying and managing patient records.
 
 **Attributes**
@@ -63,7 +63,7 @@ as it contains the primary data necessary for identifying and managing patient r
       
       @enduml
 
-      
+
 API
 ^^^
 
