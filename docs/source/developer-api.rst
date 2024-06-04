@@ -14,10 +14,10 @@ Endpoints
 ---------
 
 
-Get all patient record
-~~~~~~~~~~~~~~~~~~~~~~
+Perform a diagnosis
+~~~~~~~~~~~~~~~~~~~
 
-**Endpoint URL:** `/patient/`
+**Endpoint URL:** `/dev/diagnose?api_key=key123`
 
 **Method:** `GET`
 
@@ -34,15 +34,28 @@ Get all patient record
 
 **Body:**
 
-.. code-block:: json
+- `image` (string): The name of the user. *Required*
+- `elevation` (string): The email address of the user. *Required*
+- `bleed` (integer): The age of the user. *Optional*
+- `address` (string): The address of the user. *Optional*
 
-    {
-        "derma": 123,
-        "name": "John Doe",
-        "email": "john.doe@example.com",
-        "phone": "+966507133905"
-        "dob": "08-Nov-1980" 
-    }
+
+.. csv-table:: 
+   :header: "Name", "Description", "Type", "Required"
+   :widths: 20, 40, 20, 20
+
+   "_id", "A unique identifier for each patient.", "Integer", "Primary Key, Auto-increment, Not Null"
+   "image", "The first name of the patient.", "", "Not Null"
+   "elevation", "", "", "Not Null"
+   "bleed", "", "", "Not Null"
+   "gender", "The gender of the patient.", "", "Not Null"
+   "changed", "", "", "Not Null"
+   "hurt", "", "", "Not Null"
+   "grew", "", "", "Not Null"
+   "itch", "", "", "Not Nullable"
+   "region", "", "", "Not Nullable"
+   "age", "The date of birth of the patient.", "", "Not Null"
+
 
 
 **Response:**
@@ -53,7 +66,7 @@ Get all patient record
 **Example Request:**
 
 .. code-block:: javascript
-    fetch('https://api.dermvision.com/patient/', {
+    fetch(`https://api.dermvision.com/dev/diagnose?api_key={$key}`, {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
