@@ -6,8 +6,8 @@ For Dermatologists
 
 Contents
 --------
-   1. `Registration <#registration>`_
-   2. `Login <#login>`_
+   1. `Create an account <#create-an-account>`_
+   2. `Login to your account <#login-to-your-account>`_
    3. `Add patient record <#add-patient-record>`_
    4. `Update patient record <#update-patient-record>`_
    5. `Delete patient record <#delete-patient-record>`_
@@ -23,8 +23,8 @@ Contents
    15. `Cancel an appointment <#cancel-an-appointment>`_
 
 
-Registration
-------------
+Create an account
+-----------------
 
 .. tabs::
 
@@ -58,8 +58,8 @@ Registration
    .. tab:: On mobile
 
 
-Login
------
+Login to your account
+---------------------
 
 .. tabs::
 
@@ -182,6 +182,35 @@ Update a prescription record
 
 Delete a prescription record
 ----------------------------
+
+.. tabs::
+
+   .. tab:: On the web
+     
+   .. tab:: On mobile
+
+
+Create an appointment record
+----------------------------
+
+.. tabs::
+
+   .. tab:: On the web
+     
+   .. tab:: On mobile
+
+Update an appointment record
+----------------------------
+
+.. tabs::
+
+   .. tab:: On the web
+     
+   .. tab:: On mobile
+
+
+Cancel an appointment
+---------------------
 
 .. tabs::
 
