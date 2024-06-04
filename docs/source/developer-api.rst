@@ -13,137 +13,63 @@ Base URL: https://api.dermvision.com
 Endpoints
 ---------
 
-Upload Image
-~~~~~~~~~~~~
-- **Endpoint:** `POST /v1/images`
-- **Description:** Uploads an image for diagnostic processing.
-- **Request:**
-  - **Headers:**
-    - `Content-Type: multipart/form-data`
-  - **Body:**
-    - `image` (file): The image file to be diagnosed.
-- **Response:**
-  - `201 Created`
-  - **Body:**
-    ::
-    
-      {
-        "image_id": "string",
-        "status": "uploaded",
-        "diagnosis_url": "https://api.dermvision.com/v1/images/{image_id}/diagnosis"
-      }
 
-Get Diagnostic Result
-~~~~~~~~~~~~~~~~~~~~~
-- **Endpoint:** `GET /v1/images/{image_id}/diagnosis`
-- **Description:** Retrieves the diagnostic result for a previously uploaded image.
-- **Request:**
-  - **Headers:**
-    - `Accept: application/json`
-  - **Parameters:**
-    - `image_id` (string): The ID of the image.
-- **Response:**
-  - `200 OK`
-  - **Body:**
-    ::
-    
-      {
-        "image_id": "string",
-        "diagnosis": {
-          "condition": "string",
-          "confidence": "float",
-          "recommendation": "string"
-        },
-        "status": "diagnosed"
-      }
+Get all patient record
+~~~~~~~~~~~~~~~~~~~~~~
 
-List All Images
-~~~~~~~~~~~~~~~
-- **Endpoint:** `GET /v1/images`
-- **Description:** Lists all uploaded images with their statuses.
-- **Request:**
-  - **Headers:**
-    - `Accept: application/json`
-- **Response:**
-  - `200 OK`
-  - **Body:**
-    ::
-    
-      {
-        "images": [
-          {
-            "image_id": "string",
-            "status": "uploaded | processing | diagnosed"
-          }
-        ]
-      }
+**Endpoint URL:** `/patient/`
 
-Delete Image
-~~~~~~~~~~~~
-- **Endpoint:** `DELETE /v1/images/{image_id}`
-- **Description:** Deletes an uploaded image.
-- **Request:**
-  - **Headers:**
-    - `Accept: application/json`
-  - **Parameters:**
-    - `image_id` (string): The ID of the image.
-- **Response:**
-  - `204 No Content`
+**Method:** `GET`
 
-Example Usage
--------------
+**Description:**  Get all patient records
 
-Upload Image
-~~~~~~~~~~~~
-.. code-block:: bash
+**Headers:**
 
-  curl -X POST https://api.dermvision.com/v1/images \\
-    -H "Content-Type: multipart/form-data" \\
-    -F "image=@/path/to/skin_image.jpg"
+.. code-block:: http
 
-Get Diagnostic Result
-~~~~~~~~~~~~~~~~~~~~~
-.. code-block:: bash
+    Authorization: Bearer {token}
+    Content-Type: application/json
 
-  curl -X GET https://api.dermvision.com/v1/images/{image_id}/diagnosis \\
-    -H "Accept: application/json"
 
-List All Images
-~~~~~~~~~~~~~~~
-.. code-block:: bash
 
-  curl -X GET https://api.dermvision.com/v1/images \\
-    -H "Accept: application/json"
+**Body:**
 
-Delete Image
-~~~~~~~~~~~~
-.. code-block:: bash
+.. code-block:: json
 
-  curl -X DELETE https://api.dermvision.com/v1/images/{image_id} \\
-    -H "Accept: application/json"
+    {
+        "derma": 123,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "phone": "+966507133905"
+        "dob": "08-Nov-1980" 
+    }
 
-Error Handling
---------------
 
-All endpoints should provide appropriate HTTP status codes and error messages. Example:
+**Response:**
+- `200 OK`: A JSON object containing user data.
+- `404 Not Found`: If the user does not exist.
+- `401 Unauthorized`: If the authentication token is invalid or missing.
 
-- **400 Bad Request:** Invalid request parameters.
-- **401 Unauthorized:** Authentication failed.
-- **404 Not Found:** Image not found.
-- **500 Internal Server Error:** Server encountered an error.
+**Example Request:**
 
-Authentication
---------------
+.. code-block:: javascript
+    fetch('https://api.dermvision.com/patient/', {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
 
-For security, the API should use authentication mechanisms such as API keys, OAuth tokens, or JWT. Example:
+**Example Response:**
 
-- **Header:** `Authorization: Bearer {token}`
+.. code-block:: json
 
-Rate Limiting
--------------
+    {
+        
+    }
 
-To prevent abuse, implement rate limiting. Example:
 
-- **X-RateLimit-Limit:** The number of allowed requests in the current period.
-- **X-RateLimit-Remaining:** The number of remaining requests in the current period.
-- **X-RateLimit-Reset:** The time at which the rate limit resets.
