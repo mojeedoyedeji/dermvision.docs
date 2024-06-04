@@ -34,12 +34,6 @@ Perform a diagnosis
 
 **Body:**
 
-- `image` (string): The name of the user. *Required*
-- `elevation` (string): The email address of the user. *Required*
-- `bleed` (integer): The age of the user. *Optional*
-- `address` (string): The address of the user. *Optional*
-
-
 .. csv-table:: 
    :header: "Name", "Description", "Type", "Required"
    :widths: 20, 40, 20, 20
@@ -82,7 +76,15 @@ Perform a diagnosis
 .. code-block:: json
 
     {
-        
+      "cam": "20240526212255_XLRKAo.png_cam.jpg",
+	    "image": "20240526212255_XLRKAo.png",
+	    "model_type": "meta",
+	    "prediction": "positive",
+	    "probabilities": [
+		    6.390391718014143e-06,
+		    0.9999935626983643
+	    ],
+	    "request": "66537e00b58e5abfba26c382"
     }
 
 
