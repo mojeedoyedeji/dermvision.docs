@@ -34,7 +34,7 @@ This table is essential for managing and tracking clinical notes related to pati
    :widths: 20, 20, 40, 20, 20
 
    "Patients", "Many-to-One", "Multiple clinical notes can belong to one patient.", "Patient", "PatientID in the ClinicalNote table references PatientID in the Patient table."
-
+   "Derma", "Many-to-One", "Multiple clinical notes can belong to one patient.", "Patient", "PatientID in the ClinicalNote table references PatientID in the Patient table."
 
 API
 ^^^

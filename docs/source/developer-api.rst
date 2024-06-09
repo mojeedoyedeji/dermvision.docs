@@ -19,7 +19,7 @@ Perform a diagnosis
 
 **Endpoint URL:** `/dev/diagnose?api_key=key123`
 
-**Method:** `GET`
+**Method:** `POST`
 
 **Description:**  Get all patient records
 
@@ -38,8 +38,7 @@ Perform a diagnosis
    :header: "Name", "Description", "Type", "Required"
    :widths: 20, 40, 20, 20
 
-   "_id", "A unique identifier for each patient.", "Integer", "Primary Key, Auto-increment, Not Null"
-   "image", "The first name of the patient.", "", "Not Null"
+   "image", "", "", "Not Null"
    "elevation", "", "", "Not Null"
    "bleed", "", "", "Not Null"
    "gender", "The gender of the patient.", "", "Not Null"

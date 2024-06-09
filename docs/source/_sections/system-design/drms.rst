@@ -21,10 +21,10 @@ for identifying and managing patient records.
    :widths: 20, 40, 20, 20
 
    "_id", "A unique identifier for each patient.", "Integer", "Primary Key, Auto-increment, Not Null"
-   "image", "The first name of the patient.", "", "Not Null"
-   "patient", "The last name of the patient.", "", "Not Null"
-   "age", "The date of birth of the patient.", "", "Not Null"
-   "gender", "The gender of the patient.", "", "Not Null"
+   "image", "", "", "Not Null"
+   "patient", "", "", "Not Null"
+   "age", "", "", "Not Null"
+   "gender", "", "", "Not Null"
    "bleeding", "", "", "Not Null"
    "elevation", "", "", "Not Null"
    "changed", "", "", "Not Null"

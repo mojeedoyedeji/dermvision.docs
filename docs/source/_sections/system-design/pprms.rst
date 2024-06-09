@@ -67,8 +67,8 @@ API
       
       @enduml
 
-Get all clinical notes
-~~~~~~~~~~~~~~~~~~~~~~
+Get all treatment records
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Endpoint URL:** `/treatment`
 
