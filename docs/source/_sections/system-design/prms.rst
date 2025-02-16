@@ -45,34 +45,8 @@ as it contains the primary data necessary for identifying and managing patient r
 
 
 
-.. uml::
 
-    @startuml
 
-        entity "User" {
-        * id : int
-        ---
-        name : varchar
-        email : varchar
-        }
-
-        entity "Order" {
-        * id : int
-        ---
-        user_id : int
-        amount : decimal
-        }
-
-        entity "Product" {
-        * id : int
-        ---
-        name : varchar
-        price : decimal
-        }
-
-        User ||--o{ Order : places
-        Order ||--|{ Product : contains
-    @enduml
 
 API
 ^^^
